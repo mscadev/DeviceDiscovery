@@ -1,4 +1,4 @@
-package com.sec.android.allshare.devicediscovery;
+package com.sec.android.devicediscovery;
 
 import java.util.ArrayList;
 import com.sec.android.allshare.Device;
@@ -70,13 +70,13 @@ public class Main extends Activity {
 		@Override
 		public void onDeviceRemoved(DeviceType deviceType, Device device, ERROR err)
 		{
-			mText.append("AVPlayer: " + device.getName() + " [" + device.getIPAdress() + "] is removed" + "\r\n");
+			mText.append("AVPlayer: " + device.getName() + " [" + device.getIPAddress() + "] is removed" + "\r\n");
 		}
 
 		@Override
 		public void onDeviceAdded(DeviceType deviceType, Device device, ERROR err)
 		{
-			mText.append("AVPlayer: " + device.getName() + " [" + device.getIPAdress() + "] is found" + "\r\n");
+			mText.append("AVPlayer: " + device.getName() + " [" + device.getIPAddress() + "] is found" + "\r\n");
 		}
 	};
 
@@ -93,7 +93,7 @@ public class Main extends Activity {
 		{
 			for (int i = 0; i < mDeviceList.size(); i++)
 			{
-				mText.append("AVPlayer: " + mDeviceList.get(i).getName() + " [" + mDeviceList.get(i).getIPAdress() + "] is found" + "\r\n");
+				mText.append("AVPlayer: " + mDeviceList.get(i).getName() + " [" + mDeviceList.get(i).getIPAddress() + "] is found" + "\r\n");
 			}
 		}
 	}
